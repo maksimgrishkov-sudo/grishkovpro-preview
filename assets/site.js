@@ -159,6 +159,30 @@
     onView(fig, play);
   });
 
+  /* ---------- лента-журнал под шапкой ---------- */
+  document.querySelectorAll("[data-log]").forEach(function (list) {
+    var rows = Array.prototype.slice.call(list.children);
+    if (rows.length < 4) return;
+    var visible = true;
+    var last = rows[rows.length - 1].querySelector(".lg-t").textContent.split(":");
+    var mins = (+last[0]) * 60 + (+last[1]);
+    new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(list);
+    function tick() {
+      if (visible && !document.hidden) {
+        var r = list.firstElementChild;
+        mins = (mins + 1 + Math.floor(Math.random() * 5)) % 1440;
+        r.querySelector(".lg-t").textContent =
+          ("0" + Math.floor(mins / 60)).slice(-2) + ":" + ("0" + (mins % 60)).slice(-2);
+        r.classList.remove("is-new");
+        list.appendChild(r);
+        void r.offsetWidth;
+        r.classList.add("is-new");
+      }
+      setTimeout(tick, 2400);
+    }
+    setTimeout(tick, 1400);
+  });
+
   /* ---------- схема ---------- */
   document.querySelectorAll("[data-flow]").forEach(function (fig) {
     onView(fig, function () { fig.classList.add("is-run"); });
