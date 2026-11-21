@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>База компаний и организаций под вашу задачу — сбор по отрасли и городу | Максим Гришков</title>
+<meta name="description" content="Соберу базу компаний и организаций по отрасли и городу: телефон, сайт, почта, соцсети из открытых источников. Без дублей, с проверкой почты, выгрузка в Excel или CRM. Стоимость по задаче, оценка бесплатно.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://grishkovpro.ru/parsing/baza-kompaniy/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Максим Гришков">
+<meta property="og:title" content="База компаний и организаций под вашу задачу — сбор по отрасли и городу | Максим Гришков">
+<meta property="og:description" content="Соберу базу компаний и организаций по отрасли и городу: телефон, сайт, почта, соцсети из открытых источников. Без дублей, с проверкой почты, выгрузка в Excel или CRM. Стоимость по задаче, оценка бесплатно.">
+<meta property="og:url" content="https://grishkovpro.ru/parsing/baza-kompaniy/">
+<meta property="og:image" content="https://grishkovpro.ru/assets/og.png">
+<meta name="theme-color" content="#f3f4f0">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/oswald-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://grishkovpro.ru/"}, {"@type": "ListItem", "position": 2, "name": "Парсинг", "item": "https://grishkovpro.ru/parsing/"}, {"@type": "ListItem", "position": 3, "name": "База компаний", "item": "https://grishkovpro.ru/parsing/baza-kompaniy/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Сбор базы компаний и организаций", "serviceType": "Сбор базы компаний и организаций", "description": "Соберу базу компаний и организаций по отрасли и городу: телефон, сайт, почта, соцсети из открытых источников. Без дублей, с проверкой почты, выгрузка в Excel или CRM. Стоимость по задаче, оценка бесплатно.", "url": "https://grishkovpro.ru/parsing/baza-kompaniy/", "provider": {"@type": "Person", "@id": "https://grishkovpro.ru/#person", "name": "Гришков Максим Александрович", "jobTitle": "Разработчик Telegram-ботов и интеграций", "url": "https://grishkovpro.ru/", "email": "mailto:grishkovmaksim@yandex.ru", "telephone": "+79267236193", "taxID": "500107562836", "sameAs": ["https://t.me/LoneGunman81"], "address": {"@type": "PostalAddress", "addressLocality": "Москва", "addressCountry": "RU"}}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}, {"@type": "Country", "name": "Россия"}], "offers": {"@type": "Offer", "priceCurrency": "RUB", "description": "От 3 000 ₽ за 1 000 записей; Обычно 3–5 ₽ за запись. Точную цену называю после описания задачи, оценка бесплатно."}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Откуда берутся контакты?", "acceptedAnswer": {"@type": "Answer", "text": "Только из открытых источников, где компании сами публикуют данные о себе: карты, справочники, сайты компаний, отраслевые каталоги. Источник указан в каждой строке."}}, {"@type": "Question", "name": "Сколько стоит база компаний?", "acceptedAnswer": {"@type": "Answer", "text": "От 3 000 ₽ за 1 000 записей, обычно 3–5 ₽ за запись: зависит от числа сегментов, городов и обязательных полей. Точную цену называю после описания задачи, оценка бесплатно."}}, {"@type": "Question", "name": "Сколько компаний будет в базе?", "acceptedAnswer": {"@type": "Answer", "text": "Столько, сколько их реально есть в источниках по вашим условиям. Обещать заранее «10 тысяч» было бы нечестно: по узкой отрасли в небольшом городе их может быть сто. Пробная выборка показывает порядок цифр."}}, {"@type": "Question", "name": "Почта точно рабочая?", "acceptedAnswer": {"@type": "Answer", "text": "Каждый адрес проверяю на почтовом сервере без отправки письма. Часть серверов отвечает «да» на любой адрес — такие строки помечены отдельно, чтобы вы знали, где проверка не дала гарантии."}}, {"@type": "Question", "name": "Есть ли в базе личные телефоны?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Собираю рабочие контакты, которые компания опубликовала сама: телефон из карточки, почту с сайта. Данные частных лиц не собираю."}}, {"@type": "Question", "name": "Можно загрузить базу сразу в CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Подготовлю файл под импорт amoCRM или Битрикс24 с вашими полями, либо загружу через интеграцию и разложу по воронке."}}, {"@type": "Question", "name": "Можно обновлять базу регулярно?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Сбор работает по расписанию, новые и изменившиеся компании приходят отдельным списком или сразу в CRM."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../"><span class="mark-n">Максим Гришков</span><span class="mark-s">боты, базы, интеграции</span></a>
+    <nav class="nav" aria-label="Разделы"><a href="../../parsing/" aria-current="page">Парсинг и базы</a><a href="../../boty/">Боты для бизнеса</a><a href="../../#integracii">Интеграции</a></nav>
+    <a class="btn btn-tg top-cta" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero hero-page">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="../../">Главная</a></li><li><a href="../../parsing">Парсинг</a></li><li aria-current="page">База компаний</li></ol></nav>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="h1">База компаний и организаций под вашу задачу</h1>
+        <div class="lead"><p>Вы называете, кто вам нужен: например, автосервисы Одинцова и Красногорска или студии дизайна интерьера в Москве и Петербурге. Я собираю их из открытых источников и отдаю таблицей: название, телефон, сайт, почта, город, рубрика — и откуда взята каждая строка.</p></div>
+        <p class="hero-cta"><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+        </p>
+        <div class="hero-price"><ul class="hero-notes"><li>От 3 000 ₽ за 1 000 записей</li><li>Обычно 3–5 ₽ за запись</li></ul><p class="price-foot">Точную цену называю после описания задачи, оценка бесплатно.</p></div>
+      </div>
+      <div class="hero-ex"><figure class="ex ex-sort" data-sort>
+  <div class="sort-in" aria-hidden="true"><div data-i="0" class="scrap scrap-map"><span class="scrap-src mono">карточка на карте</span><span>Автосервис на Ленина</span><span>Автосервис · 4,6</span><span>ул. Ленина, 12</span><span>Показать телефон</span></div><div data-i="1" class="scrap scrap-site"><span class="scrap-src mono">подвал сайта</span><span>© 2025 Шиномонтаж у моста</span><span>тел.: +7 (000) 202-02-02</span><span>Одинцово, Можайское ш.</span></div><div data-i="2" class="scrap scrap-list"><span class="scrap-src mono">справочник</span><span>Кузовной цех «Северный»</span><span>Кузовной ремонт, покраска</span><span>kuzov-sever.example</span></div><div data-i="3" class="scrap scrap-map"><span class="scrap-src mono">карточка на карте</span><span>Автоэлектрик на Садовой</span><span>Звенигород</span><span>+7 (000) 404-04-04</span></div><div data-i="4" class="scrap scrap-site"><span class="scrap-src mono">страница «Контакты»</span><span>Детейлинг «Блеск»</span><span>Пишите: blesk.example</span><span>Пн–Вс 10–21</span></div></div>
+  <div class="sheet">
+    <div class="sheet-bar"><span class="mono">baza_avtoservisy.xlsx</span><span class="sheet-tag">пример</span></div>
+    <div class="sheet-scroll" tabindex="0" role="region" aria-label="Пример таблицы: baza_avtoservisy.xlsx">
+      <table><thead><tr><th scope="col" class="n">#</th><th scope="col">Название</th><th scope="col">Телефон</th><th scope="col">Сайт</th><th scope="col">Город</th><th scope="col">Рубрика</th></tr></thead>
+      <tbody><tr data-i="0"><td class="n">1</td><td>Автосервис на Ленина</td><td>+7 (000) 101-01-01</td><td>servis-lenina.example</td><td>Одинцово</td><td>Автосервис</td></tr><tr data-i="1"><td class="n">2</td><td>Шиномонтаж у моста</td><td>+7 (000) 202-02-02</td><td>—</td><td>Одинцово</td><td>Шиномонтаж</td></tr><tr data-i="2"><td class="n">3</td><td>Кузовной цех «Северный»</td><td>+7 (000) 303-03-03</td><td>kuzov-sever.example</td><td>Красногорск</td><td>Кузовной ремонт</td></tr><tr data-i="3"><td class="n">4</td><td>Автоэлектрик на Садовой</td><td>+7 (000) 404-04-04</td><td>elektrik-sad.example</td><td>Звенигород</td><td>Автоэлектрика</td></tr><tr data-i="4"><td class="n">5</td><td>Детейлинг «Блеск»</td><td>+7 (000) 505-05-05</td><td>blesk.example</td><td>Одинцово</td><td>Детейлинг</td></tr></tbody></table>
+    </div>
+  </div>
+  <figcaption>Пример: обрывки с карт, сайтов и справочников превращаются в одну таблицу. Компании и телефоны вымышлены.</figcaption>
+</figure></div>
+    </div>
+  </div>
+</section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Почему не купить готовую базу</h2><div class="prose"><p>Готовая база — это чей-то сбор полугодовой давности, проданный всем, кто заплатил. В ней закрывшиеся фирмы, телефоны, которые давно не отвечают, и адреса вида info@, которые никто не читает. Узнаёте вы об этом, когда уже потратили рассылку или день обзвона.</p>
+<p>База под задачу собирается в момент заказа и только по вашим условиям. В каждой строке есть дата сбора и источник, поэтому видно, насколько ей можно доверять. Сегменты не смешиваются: потолки отдельно от штор, Москва отдельно от Петербурга.</p></div></div></section><section class="sec"><div class="wrap"><h2 class="h2">Как собираю</h2><ol class="steps"><li><h3>Уточняем сегменты</h3><p>Отрасль, города, обязательные поля. Например: «только с почтой или телефоном, без сетевых гигантов». От этого зависит, какие источники брать.</p></li><li><h3>Выбираю источники</h3><p>Карты 2ГИС и Яндекс — для адресов, рубрик и телефонов. Сайты компаний — для почты и соцсетей. Для некоторых отраслей лучше работают свои каталоги: у дизайнеров интерьера, например, есть профильные площадки с контактами в карточке.</p></li><li><h3>Первые строки — сразу</h3><p>Присылаю начало таблицы на проверку: вы видите формат и качество до того, как собран весь объём.</p></li><li><h3>Чистка</h3><p>Дубли склеиваются по сайту и телефону. Телефоны — в едином виде +7. Служебные адреса вроде noreply отсеиваются.</p></li><li><h3>Проверка почты</h3><p>Каждый адрес проверяю на почтовом сервере без отправки письма. Серверы, которые принимают любой адрес, помечаю отдельной колонкой, чтобы вы знали, где гарантии нет.</p></li><li><h3>Выгрузка</h3><p>Excel, Google Таблица или файл для загрузки в amoCRM и Битрикс24.</p></li></ol></div></section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Какие колонки бывают</h2><ul class="gets"><li><strong>Обязательно:</strong> название, город, рубрика или сегмент, источник, дата сбора.</li><li><strong>Контакты:</strong> телефон, сайт, почта, ссылки на соцсети и мессенджеры, если компания их публикует.</li><li><strong>По запросу:</strong> адрес, рейтинг и число отзывов на картах, часы работы, пометка «есть онлайн-запись» или «нет сайта».</li><li><strong>Пометки качества:</strong> почта проверена, почта на сервере без проверки, телефон из карточки или с сайта.</li></ul></div></section><section class="sec sec-split sample"><div class="wrap split"><h2 class="h2">Пример выгрузки</h2>
+  <div class="prose"><p>Так выглядит готовая таблица: одинаковые колонки, телефоны в одном формате, источник и дата сбора в каждой строке. Все компании и контакты в файле вымышлены — это образец формата, а не база.</p>
+<p>До оплаты можно получить <mark class="todo">[бесплатный образец N строк — уточнить]</mark> по вашей задаче, чтобы проверить качество на своих данных.</p><ul class="sample-links"><li><a class="btn btn-line" href="../../files/primer_baza_kompaniy.xlsx" download>Скачать пример, Excel</a></li><li><a class="btn btn-line" href="../../files/primer_baza_kompaniy.csv" download>То же в CSV</a></li></ul></div></div></section><section class="sec chain" aria-labelledby="chain-h">
+  <div class="wrap">
+    <div class="chain-top"><h2 id="chain-h" class="h2">База, CRM и бот — одной связкой</h2><p class="lead-s">Обычно это три разных подрядчика: один продаёт базу, второй настраивает CRM, третий делает бота. Я делаю все три части, поэтому данные не теряются на стыках.</p></div>
+    <ol class="ch-list"><li class="ch-step ch-base">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-row cp-h"></span><span class="cp-row"></span><span class="cp-row"></span><span class="cp-row"></span></div>
+      <h3>Собираю базу</h3><p>Компании нужной отрасли и города: телефон, сайт, почта, рубрика. Без дублей, с источником в каждой строке.</p>
+      <a href="../../parsing/baza-kompaniy/">База компаний</a>
+    </li><li class="ch-step ch-crm">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-col"><i></i><i></i><i></i></span><span class="cp-col"><i></i><i></i></span><span class="cp-col"><i class="cp-won"></i></span></div>
+      <h3>Загружаю в CRM</h3><p>Строки становятся контактами и сделками в amoCRM или Битрикс24, по вашей воронке и с вашими полями. Сверяю с текущими клиентами, чтобы не было дублей.</p>
+      <a href="https://grishkovpro.ru/crm/">Связки с CRM: видео</a>
+    </li><li class="ch-step ch-bot">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-msg"></span><span class="cp-msg cp-out"></span><span class="cp-btns"><i></i><i></i></span></div>
+      <h3>Бот ведёт клиента</h3><p>Ответивший клиент попадает в бота: запись, напоминания, ответы на вопросы. Менеджер получает карточку в Telegram, заявка из бота ложится в ту же сделку в CRM.</p>
+      <a href="../../boty/">Боты для бизнеса</a>
+    </li></ol>
+  </div>
+</section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Для чего пригодится</h2><div class="prose"><p>Для холодных писем и звонков в B2B — чтобы менеджер звонил, а не искал. Для анализа рынка: сколько конкурентов в районе, у кого нет сайта, у кого нет онлайн-записи. Для поиска партнёров и подрядчиков. Если нужна не разовая таблица, а свежие данные каждый месяц, сбор запускается по расписанию, а новые компании приходят отдельным списком.</p>
+<p>Если база пойдёт в CRM, могу сразу сверить её с вашими текущими клиентами, чтобы менеджеры не звонили тем, кто уже покупает.</p></div></div></section><section class="sec faq" aria-labelledby="faq-h"><div class="wrap split"><h2 id="faq-h" class="h2">Вопросы и ответы</h2><div class="faq-list"><details><summary>Откуда берутся контакты?</summary><div class="faq-a"><p>Только из открытых источников, где компании сами публикуют данные о себе: карты, справочники, сайты компаний, отраслевые каталоги. Источник указан в каждой строке.</p></div></details><details><summary>Сколько стоит база компаний?</summary><div class="faq-a"><p>От 3 000 ₽ за 1 000 записей, обычно 3–5 ₽ за запись: зависит от числа сегментов, городов и обязательных полей. Точную цену называю после описания задачи, оценка бесплатно.</p></div></details><details><summary>Сколько компаний будет в базе?</summary><div class="faq-a"><p>Столько, сколько их реально есть в источниках по вашим условиям. Обещать заранее «10 тысяч» было бы нечестно: по узкой отрасли в небольшом городе их может быть сто. Пробная выборка показывает порядок цифр.</p></div></details><details><summary>Почта точно рабочая?</summary><div class="faq-a"><p>Каждый адрес проверяю на почтовом сервере без отправки письма. Часть серверов отвечает «да» на любой адрес — такие строки помечены отдельно, чтобы вы знали, где проверка не дала гарантии.</p></div></details><details><summary>Есть ли в базе личные телефоны?</summary><div class="faq-a"><p>Нет. Собираю рабочие контакты, которые компания опубликовала сама: телефон из карточки, почту с сайта. Данные частных лиц не собираю.</p></div></details><details><summary>Можно загрузить базу сразу в CRM?</summary><div class="faq-a"><p>Да. Подготовлю файл под импорт amoCRM или Битрикс24 с вашими полями, либо загружу через интеграцию и разложу по воронке.</p></div></details><details><summary>Можно обновлять базу регулярно?</summary><div class="faq-a"><p>Да. Сбор работает по расписанию, новые и изменившиеся компании приходят отдельным списком или сразу в CRM.</p></div></details></div></div></section><section class="sec quiz" id="ocenka" aria-labelledby="qz-h">
+  <div class="wrap split">
+    <div><h2 id="qz-h" class="h2">Оценка задачи в Telegram</h2>
+      <p class="lead-s">Три вопроса — и готовое сообщение откроется в Telegram. Отправляете его мне, оценку срока и стоимости пришлю в течение дня.</p></div>
+    <form class="qz" action="https://t.me/LoneGunman81" method="get" target="_blank" data-quiz>
+      <fieldset><legend>Что нужно сделать</legend><div class="qz-opts"><label class="qz-opt"><input type="radio" name="topic" value="Собрать базу или данные с сайтов" checked><span>Собрать базу или данные с сайтов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Следить за ценами конкурентов"><span>Следить за ценами конкурентов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот: запись, заявки, ответы"><span>Бот: запись, заявки, ответы</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот для селлера WB или Ozon"><span>Бот для селлера WB или Ozon</span></label><label class="qz-opt"><input type="radio" name="topic" value="Связать сайт, бота и CRM или 1С"><span>Связать сайт, бота и CRM или 1С</span></label><label class="qz-opt"><input type="radio" name="topic" value="Другое"><span>Другое</span></label></div></fieldset>
+      <label class="qz-f"><span>Опишите задачу своими словами</span>
+        <textarea name="text" rows="4" required placeholder="Например: нужна база автосервисов Одинцова с телефонами и сайтами"></textarea></label>
+      <label class="qz-f"><span>Город, объём или срок — если важно</span>
+        <input type="text" name="extra" placeholder="Например: до конца месяца, Москва и область"></label>
+      <div class="qz-go"><button class="btn btn-tg btn-big" type="submit">Открыть в Telegram</button>
+        <span class="muted">Сообщение не уйдёт само: вы увидите текст и отправите его, когда захотите.</span></div>
+    </form>
+  </div>
+</section><section class="sec how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h" class="h2">Как работаем</h2>
+    <ul class="how-list"><li><h3>Переписка, без созвонов</h3><p>Задачу обсуждаем в Telegram или по почте. Всё сказанное остаётся в переписке: к нему легко вернуться, ничего не теряется между звонками.</p></li><li><h3>Цена и срок — до начала</h3><p>Оцениваю бесплатно. Цену и срок фиксируем в договоре. Если готового описания задачи нет — помогу сформулировать.</p></li><li><h3>Самозанятый, чек и договор</h3><p>Работаю как плательщик налога на профессиональный доход. Чек выдаю через «Мой налог», безнал от ООО и ИП тоже можно.</p></li><li><h3>Показываю в работе</h3><p>До сдачи вы видите не описание, а работающую вещь: бота можно открыть, таблицу — посмотреть. Правки на этом этапе — обычное дело.</p></li><li><h3>Всё остаётся у вас</h3><p>Ставлю на ваш сервер, за хостинг платите провайдеру напрямую, обычно около 500 ₽ в месяц. За готового бота абонентской платы нет. Код ваш после полной оплаты, первый месяц исправляю ошибки бесплатно, дальше сопровождение — от 2 000 ₽ в час или от 5 000 ₽ в месяц.</p></li></ul>
+  </div>
+</section><section class="sec rel" aria-labelledby="rel-h"><div class="wrap"><h2 id="rel-h" class="h2">Рядом</h2><ul class="rel-list"><li><a href="../../parsing/karty"><span class="rel-t">Парсинг 2ГИС и Яндекс Карт</span><span class="rel-d">Организации по рубрике и городу — из двух карт в одну таблицу.</span></a></li><li><a href="../../parsing"><span class="rel-t">Парсинг сайтов на заказ</span><span class="rel-d">Сбор данных с сайтов, карт и объявлений в чистую таблицу.</span></a></li><li><a href="../../parsing/monitoring-cen"><span class="rel-t">Мониторинг цен конкурентов</span><span class="rel-d">Цены и наличие у конкурентов — каждое утро в Telegram.</span></a></li><li><a href="../../boty"><span class="rel-t">Telegram-бот для бизнеса</span><span class="rel-d">Запись, напоминания, заявки, оплата — в мессенджере клиента.</span></a></li></ul></div></section><section class="cta" aria-labelledby="cta-h">
+  <div class="wrap cta-in">
+    <h2 id="cta-h" class="cta-h">Расскажите задачу в двух словах</h2>
+    <div class="cta-side"><p>Отвечу с оценкой срока и стоимости. Если пока не ясно, что именно нужно, — тоже пишите, разберёмся в переписке.</p>
+      <p><a class="btn btn-tg btn-big" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p class="muted">или на почту <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a></p></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-contact">
+      <p class="f-h">Связь</p>
+      <p><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p>Telegram: <a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">@LoneGunman81</a> — основной канал</p>
+      <p>Почта: <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a><br><a href="mailto:maksimgrishkov@gmail.com">maksimgrishkov@gmail.com</a></p>
+      <p>Телефон: <a href="tel:+79267236193">+7 (926) 723-61-93</a><br><span class="muted">Telegram, WhatsApp, MAX — лучше написать</span><br>
+        <span class="msgr"><a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Telegram</a>
+        <a href="https://wa.me/79267236193" rel="noopener" target="_blank">WhatsApp</a>
+        <span>MAX — по номеру</span></span></p>
+      <p class="muted">Москва и Московская область, работаю удалённо по всей России</p>
+    </div>
+    <div><p class="f-h">Парсинг и базы</p><ul><li><a href="../../parsing/">Парсинг сайтов на заказ</a></li><li><a href="../../parsing/baza-kompaniy/">База компаний и организаций</a></li><li><a href="../../parsing/telegram/">Парсинг Telegram-чатов</a></li><li><a href="../../parsing/monitoring-cen/">Мониторинг цен конкурентов</a></li><li><a href="../../parsing/karty/">2ГИС и Яндекс Карты</a></li></ul></div><div><p class="f-h">Боты</p><ul><li><a href="../../boty/">Telegram-бот для бизнеса</a></li><li><a href="../../boty/zapis-klientov/">Бот записи клиентов</a></li><li><a href="../../boty/marketplace/">Бот для селлеров WB и Ozon</a></li><li><a href="../../boty/stomatologiya/">Бот для стоматологии</a></li><li><a href="../../#integracii">Интеграции с CRM и 1С</a></li></ul></div>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Гришков Максим Александрович, плательщик налога на профессиональный доход (самозанятый), ИНН 500107562836</p>
+    <p class="muted">Все компании, телефоны и цифры в примерах на сайте вымышлены, если не сказано иное.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

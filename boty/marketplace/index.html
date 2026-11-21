@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бот для селлеров Wildberries и Ozon — утренняя сводка и «Согласовать» | Максим Гришков</title>
+<meta name="description" content="Telegram-бот для селлера Wildberries и Ozon: каждое утро сводка по заказам и остаткам, товары, которые скоро закончатся, акции в минус, отзывы без ответа — и предложение с расчётом и кнопкой «Согласовать». Живое демо.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://grishkovpro.ru/boty/marketplace/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Максим Гришков">
+<meta property="og:title" content="Бот для селлеров Wildberries и Ozon — утренняя сводка и «Согласовать» | Максим Гришков">
+<meta property="og:description" content="Telegram-бот для селлера Wildberries и Ozon: каждое утро сводка по заказам и остаткам, товары, которые скоро закончатся, акции в минус, отзывы без ответа — и предложение с расчётом и кнопкой «Согласовать». Живое демо.">
+<meta property="og:url" content="https://grishkovpro.ru/boty/marketplace/">
+<meta property="og:image" content="https://grishkovpro.ru/assets/og.png">
+<meta name="theme-color" content="#f3f4f0">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/oswald-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://grishkovpro.ru/"}, {"@type": "ListItem", "position": 2, "name": "Боты", "item": "https://grishkovpro.ru/boty/"}, {"@type": "ListItem", "position": 3, "name": "Селлерам WB и Ozon", "item": "https://grishkovpro.ru/boty/marketplace/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Telegram-бот для селлеров Wildberries и Ozon", "serviceType": "Telegram-бот для селлеров Wildberries и Ozon", "description": "Telegram-бот для селлера Wildberries и Ozon: каждое утро сводка по заказам и остаткам, товары, которые скоро закончатся, акции в минус, отзывы без ответа — и предложение с расчётом и кнопкой «Согласовать». Живое демо.", "url": "https://grishkovpro.ru/boty/marketplace/", "provider": {"@type": "Person", "@id": "https://grishkovpro.ru/#person", "name": "Гришков Максим Александрович", "jobTitle": "Разработчик Telegram-ботов и интеграций", "url": "https://grishkovpro.ru/", "email": "mailto:grishkovmaksim@yandex.ru", "telephone": "+79267236193", "taxID": "500107562836", "sameAs": ["https://t.me/LoneGunman81"], "address": {"@type": "PostalAddress", "addressLocality": "Москва", "addressCountry": "RU"}}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}, {"@type": "Country", "name": "Россия"}], "offers": {"@type": "Offer", "priceCurrency": "RUB", "description": "Боты — от 20 000 ₽; бот для селлера оцениваю по числу кабинетов и проверок; Связка с CRM или 1С — от 40 000 ₽. Точную цену называю после описания задачи, оценка бесплатно."}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Бот сам меняет цены и акции?", "acceptedAnswer": {"@type": "Answer", "text": "Только после вашего «Согласовать». Без нажатия бот ничего не отправляет в кабинет. Отклонённое предложение по этому товару он больше не показывает."}}, {"@type": "Question", "name": "Это безопасно — давать доступ к кабинету?", "acceptedAnswer": {"@type": "Answer", "text": "Бот работает на вашем сервере, токен хранится только там. В чужие облачные сервисы он не передаётся."}}, {"@type": "Question", "name": "Откуда бот знает себестоимость?", "acceptedAnswer": {"@type": "Answer", "text": "В кабинетах её нет, поэтому её берём из вашей таблицы или из 1С. Туда же — сроки поставки и налог."}}, {"@type": "Question", "name": "Работает с обеими площадками сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Да, в сводке Wildberries и Ozon идут рядом. Можно подключить и одну."}}, {"@type": "Question", "name": "Сколько стоит бот для селлера?", "acceptedAnswer": {"@type": "Answer", "text": "Боты у меня стоят от 20 000 ₽, со связкой с CRM — от 40 000 ₽. Бот для селлера оцениваю по числу кабинетов, нужных проверок и связке с 1С. Точную цену называю после описания задачи, оценка бесплатно."}}, {"@type": "Question", "name": "Можно ли отвечать на отзывы через бота?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Бот присылает отзыв и черновик ответа, вы отправляете его кнопкой или просите переписать."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../"><span class="mark-n">Максим Гришков</span><span class="mark-s">боты, базы, интеграции</span></a>
+    <nav class="nav" aria-label="Разделы"><a href="../../parsing/">Парсинг и базы</a><a href="../../boty/" aria-current="page">Боты для бизнеса</a><a href="../../#integracii">Интеграции</a></nav>
+    <a class="btn btn-tg top-cta" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero hero-page">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="../../">Главная</a></li><li><a href="../../boty">Боты</a></li><li aria-current="page">Селлерам WB и Ozon</li></ol></nav>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="h1">Бот для селлеров Wildberries и Ozon</h1>
+        <div class="lead"><p>Каждое утро бот сам заходит в ваши кабинеты Wildberries и Ozon, считает вчерашний день и присылает в Telegram сводку. Под сводкой — несколько «фокусов дня»: что горит и что предлагается сделать, с цифрами. Вы читаете и нажимаете «Согласовать» или «Отклонить».</p></div>
+        <p class="hero-cta"><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+        <a class="btn btn-line" href="https://t.me/seller_demo_grishkov_bot" rel="noopener" target="_blank">Открыть демо селлера</a></p>
+        <div class="hero-price"><ul class="hero-notes"><li>Боты — от 20 000 ₽; бот для селлера оцениваю по числу кабинетов и проверок</li><li>Связка с CRM или 1С — от 40 000 ₽</li></ul><p class="price-foot">Точную цену называю после описания задачи, оценка бесплатно.</p></div>
+      </div>
+      <div class="hero-ex"><figure class="ex ex-chat" data-sim>
+  <div class="tg">
+    <div class="tg-head"><span class="tg-ava" aria-hidden="true">А</span>
+      <span class="tg-who"><b>Ассистент селлера — демо</b><span class="mono">@seller_demo_grishkov_bot</span></span></div>
+    <ol class="tg-log" aria-label="Пример переписки с ботом"><li class="tg-m tg-bot"><span class="tg-bubble"><strong>Сводка на сегодня, 09:00</strong><br>Ozon: заказы 22 шт на 29 680 ₽ (+21%)<br><strong>Фокусы дня</strong><br>1. Ozon · Футболка базовая белая: нет в наличии<br>2. Ozon · Свитшот флис серый: в акции в минус 116 ₽ с каждой продажи<br>3. WB · 3 отзыва без ответа, один на 2★<br>4. WB · Брюки карго хаки: цена выше рынка</span><span class="tg-kb"><span class="tg-row"><span class="tg-b">Разобрать по порядку</span></span><span class="tg-row"><span class="tg-b">1</span><span class="tg-b is-press">2</span><span class="tg-b">3</span><span class="tg-b">4</span></span></span></li><li class="tg-m tg-bot"><span class="tg-bubble"><strong>Ozon · Свитшот флис серый: акция в минус</strong><br><strong>Что сделать:</strong> выйти из акции «Чёрная пятница: −25%», вернуть цену 1 690 ₽.<br><strong>Почему:</strong> цена в акции 1 290 ₽, с одной продажи −116 ₽ после комиссии 22%, логистики и себестоимости. В акции продаёте 9 шт в день — минус ~1 046 ₽ в день.</span><span class="tg-kb"><span class="tg-row"><span class="tg-b is-press">Согласовать</span><span class="tg-b">Отклонить</span></span><span class="tg-row"><span class="tg-b">Подробнее</span></span></span></li><li class="tg-m tg-bot"><span class="tg-bubble">Отправил в Ozon: товар выходит из акции «Чёрная пятница: −25%», цена вернётся к 1 690 ₽. Завтра в утренней сводке покажу итог.</span></li><li class="tg-m tg-bot"><span class="tg-bubble"><strong>WB · отзыв 2★ на «Рубашка льняная бежевая»</strong><br>«После первой стирки рубашка села почти на размер. На рукаве разошёлся шов.»<br><strong>Черновик ответа:</strong> Анна, здравствуйте! Спасибо за отзыв, нам жаль, что рубашка подвела. Лён после первой стирки даёт усадку до 3–5%…</span><span class="tg-kb"><span class="tg-row"><span class="tg-b is-press">Отправить</span><span class="tg-b">Переписать</span></span><span class="tg-row"><span class="tg-b">Не отвечать</span><span class="tg-b">Подробнее</span></span></span></li><li class="tg-m tg-bot"><span class="tg-bubble">Отправил ответ в WB, он появится под отзывом.</span></li></ol>
+    <div class="tg-foot"><button type="button" class="tg-replay" hidden>Показать ещё раз</button></div>
+  </div>
+  <figcaption><span>Переписка с демо-ботом, сокращённо. Магазин и цифры вымышлены, тексты и расчёты — из настоящего бота.</span><a class="btn btn-try" href="https://t.me/seller_demo_grishkov_bot" rel="noopener" target="_blank">Попробовать самому в Telegram</a></figcaption>
+</figure></div>
+    </div>
+  </div>
+</section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Что упускают в кабинетах</h2><div class="prose"><p>Кабинеты WB и Ozon показывают много цифр, но не говорят, что с ними делать. Товар закончится через три дня, а поставка идёт десять — это видно, только если сесть и посчитать. Товар попал в акцию, и каждая продажа уходит в минус после комиссии и логистики. Отзыв на две звезды висит без ответа, и его читает каждый следующий покупатель.</p>
+<p>Всё это можно найти самому, если каждое утро тратить час на два кабинета. Бот тратит на это секунды и показывает только то, что требует решения.</p></div></div></section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Что бот находит каждое утро</h2><ul class="gets"><li><strong>Скоро закончится.</strong> Остатка хватит на меньше дней, чем идёт поставка, — бот предлагает объём поставки.</li><li><strong>Нет в наличии.</strong> Сколько выручки в день уходит мимо и где есть запас, который можно перебросить.</li><li><strong>Акция в минус.</strong> Цена в акции после комиссии, логистики, налога и себестоимости даёт убыток с каждой продажи — бот предлагает выйти из акции и показывает, сколько это сэкономит.</li><li><strong>Отзыв без ответа.</strong> Негативный отзыв и черновик ответа: можно отправить, переписать или не отвечать.</li><li><strong>Залежалый товар.</strong> Остатка на много месяцев, а цена выше рынка — бот предлагает новую цену с расчётом.</li></ul></div></section><section class="sec"><div class="wrap"><h2 class="h2">Как это работает</h2><ol class="steps"><li><h3>Подключение кабинетов</h3><p>WB — по персональному токену, Ozon — по Client-Id и API-ключу. Подключение занимает около десяти минут.</p></li><li><h3>Ваши цифры</h3><p>Себестоимость, сроки поставки и цены рынка, которых нет в кабинетах, берутся из вашей таблицы или из 1С.</p></li><li><h3>Сводка в 9:00</h3><p>Каждое утро — вчерашние заказы и выручка по обеим площадкам, изменение к позавчера и фокусы дня.</p></li><li><h3>Решение кнопкой</h3><p>По каждому фокусу — карточка: что сделать, почему, эффект в рублях. «Согласовать» отправляет действие в кабинет, «Подробнее» показывает расчёт.</p></li></ol></div></section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Что можно добавить</h2><div class="prose"><p>Сводку можно присылать в общий чат команды, а не только владельцу. «Согласовать» по поставке — передавать ответственному с напоминанием. Себестоимость и остатки своего склада — брать из 1С, а не из таблицы. Сравнение с ценами конкурентов — подключить отдельным <a href="../../parsing/monitoring-cen/">мониторингом цен</a>.</p>
+<p>Бот работает на вашем сервере: персональный токен WB нельзя передавать в чужие облачные сервисы, а здесь он никуда не уходит.</p></div></div></section><section class="sec demo" id="demo"><div class="wrap"><h2 class="h2">Попробуйте демо</h2><p class="lead-s">В демо магазин и цифры вымышлены, запросов к WB и Ozon нет — но расчёты и кнопки те же, что в рабочей версии.</p><ul class="demo-list"><li><a class="demo-row" href="https://t.me/seller_demo_grishkov_bot" rel="noopener" target="_blank"><span class="demo-n">Ассистент селлера WB и Ozon</span><span class="demo-d">Нажмите «Утренняя сводка», откройте фокус и согласуйте действие.</span><span class="demo-h mono">@seller_demo_grishkov_bot</span></a></li></ul></div></section><section class="sec faq" aria-labelledby="faq-h"><div class="wrap split"><h2 id="faq-h" class="h2">Вопросы и ответы</h2><div class="faq-list"><details><summary>Бот сам меняет цены и акции?</summary><div class="faq-a"><p>Только после вашего «Согласовать». Без нажатия бот ничего не отправляет в кабинет. Отклонённое предложение по этому товару он больше не показывает.</p></div></details><details><summary>Это безопасно — давать доступ к кабинету?</summary><div class="faq-a"><p>Бот работает на вашем сервере, токен хранится только там. В чужие облачные сервисы он не передаётся.</p></div></details><details><summary>Откуда бот знает себестоимость?</summary><div class="faq-a"><p>В кабинетах её нет, поэтому её берём из вашей таблицы или из 1С. Туда же — сроки поставки и налог.</p></div></details><details><summary>Работает с обеими площадками сразу?</summary><div class="faq-a"><p>Да, в сводке Wildberries и Ozon идут рядом. Можно подключить и одну.</p></div></details><details><summary>Сколько стоит бот для селлера?</summary><div class="faq-a"><p>Боты у меня стоят от 20 000 ₽, со связкой с CRM — от 40 000 ₽. Бот для селлера оцениваю по числу кабинетов, нужных проверок и связке с 1С. Точную цену называю после описания задачи, оценка бесплатно.</p></div></details><details><summary>Можно ли отвечать на отзывы через бота?</summary><div class="faq-a"><p>Да. Бот присылает отзыв и черновик ответа, вы отправляете его кнопкой или просите переписать.</p></div></details></div></div></section><section class="sec quiz" id="ocenka" aria-labelledby="qz-h">
+  <div class="wrap split">
+    <div><h2 id="qz-h" class="h2">Оценка задачи в Telegram</h2>
+      <p class="lead-s">Три вопроса — и готовое сообщение откроется в Telegram. Отправляете его мне, оценку срока и стоимости пришлю в течение дня.</p></div>
+    <form class="qz" action="https://t.me/LoneGunman81" method="get" target="_blank" data-quiz>
+      <fieldset><legend>Что нужно сделать</legend><div class="qz-opts"><label class="qz-opt"><input type="radio" name="topic" value="Собрать базу или данные с сайтов"><span>Собрать базу или данные с сайтов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Следить за ценами конкурентов"><span>Следить за ценами конкурентов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот: запись, заявки, ответы"><span>Бот: запись, заявки, ответы</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот для селлера WB или Ozon" checked><span>Бот для селлера WB или Ozon</span></label><label class="qz-opt"><input type="radio" name="topic" value="Связать сайт, бота и CRM или 1С"><span>Связать сайт, бота и CRM или 1С</span></label><label class="qz-opt"><input type="radio" name="topic" value="Другое"><span>Другое</span></label></div></fieldset>
+      <label class="qz-f"><span>Опишите задачу своими словами</span>
+        <textarea name="text" rows="4" required placeholder="Например: нужна база автосервисов Одинцова с телефонами и сайтами"></textarea></label>
+      <label class="qz-f"><span>Город, объём или срок — если важно</span>
+        <input type="text" name="extra" placeholder="Например: до конца месяца, Москва и область"></label>
+      <div class="qz-go"><button class="btn btn-tg btn-big" type="submit">Открыть в Telegram</button>
+        <span class="muted">Сообщение не уйдёт само: вы увидите текст и отправите его, когда захотите.</span></div>
+    </form>
+  </div>
+</section><section class="sec how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h" class="h2">Как работаем</h2>
+    <ul class="how-list"><li><h3>Переписка, без созвонов</h3><p>Задачу обсуждаем в Telegram или по почте. Всё сказанное остаётся в переписке: к нему легко вернуться, ничего не теряется между звонками.</p></li><li><h3>Цена и срок — до начала</h3><p>Оцениваю бесплатно. Цену и срок фиксируем в договоре. Если готового описания задачи нет — помогу сформулировать.</p></li><li><h3>Самозанятый, чек и договор</h3><p>Работаю как плательщик налога на профессиональный доход. Чек выдаю через «Мой налог», безнал от ООО и ИП тоже можно.</p></li><li><h3>Показываю в работе</h3><p>До сдачи вы видите не описание, а работающую вещь: бота можно открыть, таблицу — посмотреть. Правки на этом этапе — обычное дело.</p></li><li><h3>Всё остаётся у вас</h3><p>Ставлю на ваш сервер, за хостинг платите провайдеру напрямую, обычно около 500 ₽ в месяц. За готового бота абонентской платы нет. Код ваш после полной оплаты, первый месяц исправляю ошибки бесплатно, дальше сопровождение — от 2 000 ₽ в час или от 5 000 ₽ в месяц.</p></li></ul>
+  </div>
+</section><section class="sec rel" aria-labelledby="rel-h"><div class="wrap"><h2 id="rel-h" class="h2">Рядом</h2><ul class="rel-list"><li><a href="../../parsing/monitoring-cen"><span class="rel-t">Мониторинг цен конкурентов</span><span class="rel-d">Цены и наличие у конкурентов — каждое утро в Telegram.</span></a></li><li><a href="../../boty"><span class="rel-t">Telegram-бот для бизнеса</span><span class="rel-d">Запись, напоминания, заявки, оплата — в мессенджере клиента.</span></a></li><li><a href="../../boty/zapis-klientov"><span class="rel-t">Бот для записи клиентов</span><span class="rel-d">Запись, напоминания и повторные визиты без администратора.</span></a></li><li><a href="../../parsing"><span class="rel-t">Парсинг сайтов на заказ</span><span class="rel-d">Сбор данных с сайтов, карт и объявлений в чистую таблицу.</span></a></li></ul></div></section><section class="cta" aria-labelledby="cta-h">
+  <div class="wrap cta-in">
+    <h2 id="cta-h" class="cta-h">Расскажите задачу в двух словах</h2>
+    <div class="cta-side"><p>Отвечу с оценкой срока и стоимости. Если пока не ясно, что именно нужно, — тоже пишите, разберёмся в переписке.</p>
+      <p><a class="btn btn-tg btn-big" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p class="muted">или на почту <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a></p></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-contact">
+      <p class="f-h">Связь</p>
+      <p><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p>Telegram: <a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">@LoneGunman81</a> — основной канал</p>
+      <p>Почта: <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a><br><a href="mailto:maksimgrishkov@gmail.com">maksimgrishkov@gmail.com</a></p>
+      <p>Телефон: <a href="tel:+79267236193">+7 (926) 723-61-93</a><br><span class="muted">Telegram, WhatsApp, MAX — лучше написать</span><br>
+        <span class="msgr"><a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Telegram</a>
+        <a href="https://wa.me/79267236193" rel="noopener" target="_blank">WhatsApp</a>
+        <span>MAX — по номеру</span></span></p>
+      <p class="muted">Москва и Московская область, работаю удалённо по всей России</p>
+    </div>
+    <div><p class="f-h">Парсинг и базы</p><ul><li><a href="../../parsing/">Парсинг сайтов на заказ</a></li><li><a href="../../parsing/baza-kompaniy/">База компаний и организаций</a></li><li><a href="../../parsing/telegram/">Парсинг Telegram-чатов</a></li><li><a href="../../parsing/monitoring-cen/">Мониторинг цен конкурентов</a></li><li><a href="../../parsing/karty/">2ГИС и Яндекс Карты</a></li></ul></div><div><p class="f-h">Боты</p><ul><li><a href="../../boty/">Telegram-бот для бизнеса</a></li><li><a href="../../boty/zapis-klientov/">Бот записи клиентов</a></li><li><a href="../../boty/marketplace/">Бот для селлеров WB и Ozon</a></li><li><a href="../../boty/stomatologiya/">Бот для стоматологии</a></li><li><a href="../../#integracii">Интеграции с CRM и 1С</a></li></ul></div>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Гришков Максим Александрович, плательщик налога на профессиональный доход (самозанятый), ИНН 500107562836</p>
+    <p class="muted">Все компании, телефоны и цифры в примерах на сайте вымышлены, если не сказано иное.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

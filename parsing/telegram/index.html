@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Парсинг Telegram-чатов и каналов — заявки по ключевым словам в личку | Максим Гришков</title>
+<meta name="description" content="Парсинг Telegram-чатов и каналов: бот следит за чатами по ключевым словам, отсеивает рекламу и предложения конкурентов и присылает заявки в Telegram за секунды. Разовая выгрузка сообщений в таблицу. От 4 000 ₽.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://grishkovpro.ru/parsing/telegram/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Максим Гришков">
+<meta property="og:title" content="Парсинг Telegram-чатов и каналов — заявки по ключевым словам в личку | Максим Гришков">
+<meta property="og:description" content="Парсинг Telegram-чатов и каналов: бот следит за чатами по ключевым словам, отсеивает рекламу и предложения конкурентов и присылает заявки в Telegram за секунды. Разовая выгрузка сообщений в таблицу. От 4 000 ₽.">
+<meta property="og:url" content="https://grishkovpro.ru/parsing/telegram/">
+<meta property="og:image" content="https://grishkovpro.ru/assets/og.png">
+<meta name="theme-color" content="#f3f4f0">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/oswald-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://grishkovpro.ru/"}, {"@type": "ListItem", "position": 2, "name": "Парсинг", "item": "https://grishkovpro.ru/parsing/"}, {"@type": "ListItem", "position": 3, "name": "Telegram", "item": "https://grishkovpro.ru/parsing/telegram/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Парсинг Telegram-чатов и каналов", "serviceType": "Парсинг Telegram-чатов и каналов", "description": "Парсинг Telegram-чатов и каналов: бот следит за чатами по ключевым словам, отсеивает рекламу и предложения конкурентов и присылает заявки в Telegram за секунды. Разовая выгрузка сообщений в таблицу. От 4 000 ₽.", "url": "https://grishkovpro.ru/parsing/telegram/", "provider": {"@type": "Person", "@id": "https://grishkovpro.ru/#person", "name": "Гришков Максим Александрович", "jobTitle": "Разработчик Telegram-ботов и интеграций", "url": "https://grishkovpro.ru/", "email": "mailto:grishkovmaksim@yandex.ru", "telephone": "+79267236193", "taxID": "500107562836", "sameAs": ["https://t.me/LoneGunman81"], "address": {"@type": "PostalAddress", "addressLocality": "Москва", "addressCountry": "RU"}}, "areaServed": [{"@type": "City", "name": "Москва"}, {"@type": "AdministrativeArea", "name": "Московская область"}, {"@type": "Country", "name": "Россия"}], "offers": {"@type": "Offer", "priceCurrency": "RUB", "description": "Мониторинг чатов — от 10 000 ₽ за настройку + от 3 000 ₽ в месяц; Разовая выгрузка сообщений — от 4 000 ₽. Точную цену называю после описания задачи, оценка бесплатно."}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько стоит парсинг Telegram?", "acceptedAnswer": {"@type": "Answer", "text": "Мониторинг чатов с отбором заявок — от 10 000 ₽ за настройку и от 3 000 ₽ в месяц за поддержку. Разовая выгрузка сообщений в таблицу — от 4 000 ₽. Точную цену называю после описания задачи, оценка бесплатно."}}, {"@type": "Question", "name": "Можно читать закрытые чаты?", "acceptedAnswer": {"@type": "Answer", "text": "Только те, где состоит аккаунт бота. Вступает в них человек, обычно вы сами — бот видит ровно то, что видит этот участник."}}, {"@type": "Question", "name": "Не заблокируют ли аккаунт?", "acceptedAnswer": {"@type": "Answer", "text": "Если с него только читать — риск минимальный. Блокируют за рассылки и сообщения незнакомым, поэтому с аккаунта бота никто не пишет."}}, {"@type": "Question", "name": "Как быстро приходит заявка?", "acceptedAnswer": {"@type": "Answer", "text": "Через несколько секунд после публикации: бот получает сообщения в реальном времени, а не раз в час."}}, {"@type": "Question", "name": "Сколько будет мусора?", "acceptedAnswer": {"@type": "Answer", "text": "Первые дни бот настраивается по живому потоку: что пришло лишнего — добавляем в стоп-слова, что пропустил — в словарь. Править слова вы можете и сами, кнопками в боте."}}, {"@type": "Question", "name": "Где работает бот?", "acceptedAnswer": {"@type": "Answer", "text": "На вашем сервере, обычно около 500 ₽ в месяц у провайдера. Сессия аккаунта хранится там же и никуда не передаётся."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="../../"><span class="mark-n">Максим Гришков</span><span class="mark-s">боты, базы, интеграции</span></a>
+    <nav class="nav" aria-label="Разделы"><a href="../../parsing/" aria-current="page">Парсинг и базы</a><a href="../../boty/">Боты для бизнеса</a><a href="../../#integracii">Интеграции</a></nav>
+    <a class="btn btn-tg top-cta" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero hero-page">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Хлебные крошки"><ol><li><a href="../../">Главная</a></li><li><a href="../../parsing">Парсинг</a></li><li aria-current="page">Telegram</li></ol></nav>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 class="h1">Парсинг Telegram-чатов и каналов</h1>
+        <div class="lead"><p>В городских и отраслевых чатах каждый день кто-то ищет мастера, подрядчика, технику или поставщика. Такие сообщения тонут среди рекламы через полчаса. Бот читает чаты круглосуточно, отбирает настоящие заявки по вашей теме и присылает их вам в личку через несколько секунд после публикации.</p></div>
+        <p class="hero-cta"><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a>
+        </p>
+        <div class="hero-price"><ul class="hero-notes"><li>Мониторинг чатов — от 10 000 ₽ за настройку + от 3 000 ₽ в месяц</li><li>Разовая выгрузка сообщений — от 4 000 ₽</li></ul><p class="price-foot">Точную цену называю после описания задачи, оценка бесплатно.</p></div>
+      </div>
+      <div class="hero-ex"><figure class="ex ex-stream" data-stream>
+  <div class="st-in"><div class="st-bar"><span class="mono">Чаты о ремонте: Одинцово, Красногорск, Звенигород</span><span class="sheet-tag">пример</span></div>
+    <ol class="st-list" aria-label="Пример потока сообщений из чатов"><li class="st-msg is-ok" data-i="0"><span class="st-chat">Ремонт и отделка, Одинцово</span><span class="st-text">Ищу бригаду на ремонт ванной под ключ, плитка и сантехника. Одинцово, начать в декабре.</span><span class="st-v">заявка</span></li><li class="st-msg is-drop" data-i="1"><span class="st-chat">Ремонт и отделка, Одинцово</span><span class="st-text">Делаем ремонт квартир любой сложности! Гарантия 3 года, звоните.</span><span class="st-v">отсеяно: предложение</span></li><li class="st-msg is-ok" data-i="2"><span class="st-chat">Соседи Звенигорода</span><span class="st-text">Кто знает хорошего плиточника? Нужно положить 20 м² на кухне.</span><span class="st-v">заявка</span></li><li class="st-msg is-drop" data-i="3"><span class="st-chat">Работа в Красногорске</span><span class="st-text">Требуется разнорабочий на объект, оплата ежедневно.</span><span class="st-v">отсеяно: вакансия</span></li><li class="st-msg is-drop" data-i="4"><span class="st-chat">Соседи Звенигорода</span><span class="st-text">Продам остатки ламината, 12 упаковок, самовывоз.</span><span class="st-v">отсеяно: не по теме</span></li><li class="st-msg is-ok" data-i="5"><span class="st-chat">Красногорск: всё о ремонте</span><span class="st-text">Нужен мастер поклеить обои в двушке, на выходных. Красногорск.</span><span class="st-v">заявка</span></li></ol></div>
+  <div class="tg st-out">
+    <div class="tg-head"><span class="tg-ava" aria-hidden="true">З</span>
+      <span class="tg-who"><b>Заявки из чатов</b><span class="mono">ваш бот, приходит вам в личку</span></span></div>
+    <ol class="tg-log" aria-label="Карточки заявок"><li class="tg-m tg-bot st-card" data-i="0"><span class="tg-bubble"><strong>Заявка · Одинцово</strong><br>Ищу бригаду на ремонт ванной под ключ, плитка и сантехника. Начать в декабре.<br>Чат: Ремонт и отделка, Одинцово</span><span class="tg-kb"><span class="tg-row"><span class="tg-b">Открыть в чате</span><span class="tg-b">Не заявка</span></span></span></li><li class="tg-m tg-bot st-card" data-i="2"><span class="tg-bubble"><strong>Заявка · Звенигород</strong><br>Нужен плиточник, 20 м² на кухне.<br>Чат: Соседи Звенигорода</span><span class="tg-kb"><span class="tg-row"><span class="tg-b">Открыть в чате</span><span class="tg-b">Не заявка</span></span></span></li><li class="tg-m tg-bot st-card" data-i="5"><span class="tg-bubble"><strong>Заявка · Красногорск</strong><br>Поклеить обои в двухкомнатной квартире, на выходных.<br>Чат: Красногорск: всё о ремонте</span><span class="tg-kb"><span class="tg-row"><span class="tg-b">Открыть в чате</span><span class="tg-b">Не заявка</span></span></span></li></ol>
+  </div>
+  <figcaption>Пример: из потока сообщений бот берёт только заявки и присылает их карточкой. Чаты, сообщения и люди вымышлены.</figcaption>
+</figure></div>
+    </div>
+  </div>
+</section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Почему это работает</h2><div class="prose"><p>Человек, который пишет в чат «ищу бригаду на ремонт ванной», уже готов заказывать. Кто ответил первым и по делу, тот и получил заказ. Но читать двадцать чатов весь день невозможно, а уведомления от них просто выключают.</p>
+<p>Я сам нахожу работу так же: мой бот следит за чатами с заказами и присылает мне только подходящие. Поэтому знаю, где такой бот ошибается, и как настроить его так, чтобы в личку не сыпался мусор.</p></div></div></section><section class="sec"><div class="wrap"><h2 class="h2">Как это работает</h2><ol class="steps"><li><h3>Отдельный аккаунт</h3><p>Бот работает от отдельного аккаунта Telegram, который заводите вы. Он видит то же, что обычный участник: открытые чаты и закрытые группы, куда этот аккаунт вступил.</p></li><li><h3>Словарь вашей темы</h3><p>Собираем слова, которыми ваши клиенты пишут на самом деле, включая разговорные названия и сокращения. Лучше всего — по вашим примерам нужных и ненужных сообщений.</p></li><li><h3>Отбор</h3><p>Бот смотрит не только на слова, но и на смысл: просьба о помощи — заявка, а «делаем ремонт, звоните» — предложение конкурента, и оно отсеивается. Вакансии и объявления «продам» тоже.</p></li><li><h3>Карточка вам</h3><p>Заявка приходит в Telegram карточкой: текст, чат, город, ссылка на сообщение. Если город понятен из текста, он помечен.</p></li><li><h3>Настройка кнопками</h3><p>Слова поиска и список чатов вы меняете сами, кнопками в боте, без программиста и без перезапуска. Кнопка «Что за сутки» показывает, сколько прочитано и сколько отобрано.</p></li></ol></div></section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Что можно получить</h2><ul class="gets"><li><strong>Заявки в реальном времени.</strong> Сообщения со спросом на вашу услугу — в личку или в чат команды.</li><li><strong>Упоминания.</strong> Когда в чатах пишут о вашей компании, товаре или конкуренте.</li><li><strong>Новые чаты по теме.</strong> Бот ищет публичные чаты по вашей теме и проверяет, есть ли там живые заявки, а не судит по названию.</li><li><strong>Разовую выгрузку.</strong> Сообщения из выбранных чатов по ключевым словам — в таблицу: дата, чат, текст, ссылка, ник автора, если он открыт.</li><li><strong>MAX.</strong> Тот же отбор можно настроить для чатов в мессенджере MAX.</li></ul></div></section><section class="sec sec-split"><div class="wrap split"><h2 class="h2">Важные ограничения</h2><div class="prose"><p>С аккаунта, от которого работает бот, ничего не пишут и не рассылают: Telegram быстро блокирует такие аккаунты, и вместе с ним встанет весь мониторинг. Отвечаете на заявки вы — со своего обычного аккаунта.</p>
+<p>Бот видит только те чаты, где состоит его аккаунт. В закрытые группы вступает человек. Заявок будет столько, сколько их реально пишут в ваших чатах: в узкой нише это может быть несколько в неделю, и это нормально.</p>
+<p>Ежемесячная плата за мониторинг — это поддержка: чаты закрываются и появляются новые, люди начинают писать иначе, и словарь нужно подправлять по живому потоку.</p></div></div></section><section class="sec chain" aria-labelledby="chain-h">
+  <div class="wrap">
+    <div class="chain-top"><h2 id="chain-h" class="h2">База, CRM и бот — одной связкой</h2><p class="lead-s">Обычно это три разных подрядчика: один продаёт базу, второй настраивает CRM, третий делает бота. Я делаю все три части, поэтому данные не теряются на стыках.</p></div>
+    <ol class="ch-list"><li class="ch-step ch-base">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-row cp-h"></span><span class="cp-row"></span><span class="cp-row"></span><span class="cp-row"></span></div>
+      <h3>Собираю базу</h3><p>Компании нужной отрасли и города: телефон, сайт, почта, рубрика. Без дублей, с источником в каждой строке.</p>
+      <a href="../../parsing/baza-kompaniy/">База компаний</a>
+    </li><li class="ch-step ch-crm">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-col"><i></i><i></i><i></i></span><span class="cp-col"><i></i><i></i></span><span class="cp-col"><i class="cp-won"></i></span></div>
+      <h3>Загружаю в CRM</h3><p>Строки становятся контактами и сделками в amoCRM или Битрикс24, по вашей воронке и с вашими полями. Сверяю с текущими клиентами, чтобы не было дублей.</p>
+      <a href="https://grishkovpro.ru/crm/">Связки с CRM: видео</a>
+    </li><li class="ch-step ch-bot">
+      <div class="ch-pic" aria-hidden="true"><span class="cp-msg"></span><span class="cp-msg cp-out"></span><span class="cp-btns"><i></i><i></i></span></div>
+      <h3>Бот ведёт клиента</h3><p>Ответивший клиент попадает в бота: запись, напоминания, ответы на вопросы. Менеджер получает карточку в Telegram, заявка из бота ложится в ту же сделку в CRM.</p>
+      <a href="../../boty/">Боты для бизнеса</a>
+    </li></ol>
+  </div>
+</section><section class="sec faq" aria-labelledby="faq-h"><div class="wrap split"><h2 id="faq-h" class="h2">Вопросы и ответы</h2><div class="faq-list"><details><summary>Сколько стоит парсинг Telegram?</summary><div class="faq-a"><p>Мониторинг чатов с отбором заявок — от 10 000 ₽ за настройку и от 3 000 ₽ в месяц за поддержку. Разовая выгрузка сообщений в таблицу — от 4 000 ₽. Точную цену называю после описания задачи, оценка бесплатно.</p></div></details><details><summary>Можно читать закрытые чаты?</summary><div class="faq-a"><p>Только те, где состоит аккаунт бота. Вступает в них человек, обычно вы сами — бот видит ровно то, что видит этот участник.</p></div></details><details><summary>Не заблокируют ли аккаунт?</summary><div class="faq-a"><p>Если с него только читать — риск минимальный. Блокируют за рассылки и сообщения незнакомым, поэтому с аккаунта бота никто не пишет.</p></div></details><details><summary>Как быстро приходит заявка?</summary><div class="faq-a"><p>Через несколько секунд после публикации: бот получает сообщения в реальном времени, а не раз в час.</p></div></details><details><summary>Сколько будет мусора?</summary><div class="faq-a"><p>Первые дни бот настраивается по живому потоку: что пришло лишнего — добавляем в стоп-слова, что пропустил — в словарь. Править слова вы можете и сами, кнопками в боте.</p></div></details><details><summary>Где работает бот?</summary><div class="faq-a"><p>На вашем сервере, обычно около 500 ₽ в месяц у провайдера. Сессия аккаунта хранится там же и никуда не передаётся.</p></div></details></div></div></section><section class="sec quiz" id="ocenka" aria-labelledby="qz-h">
+  <div class="wrap split">
+    <div><h2 id="qz-h" class="h2">Оценка задачи в Telegram</h2>
+      <p class="lead-s">Три вопроса — и готовое сообщение откроется в Telegram. Отправляете его мне, оценку срока и стоимости пришлю в течение дня.</p></div>
+    <form class="qz" action="https://t.me/LoneGunman81" method="get" target="_blank" data-quiz>
+      <fieldset><legend>Что нужно сделать</legend><div class="qz-opts"><label class="qz-opt"><input type="radio" name="topic" value="Собрать базу или данные с сайтов" checked><span>Собрать базу или данные с сайтов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Следить за ценами конкурентов"><span>Следить за ценами конкурентов</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот: запись, заявки, ответы"><span>Бот: запись, заявки, ответы</span></label><label class="qz-opt"><input type="radio" name="topic" value="Бот для селлера WB или Ozon"><span>Бот для селлера WB или Ozon</span></label><label class="qz-opt"><input type="radio" name="topic" value="Связать сайт, бота и CRM или 1С"><span>Связать сайт, бота и CRM или 1С</span></label><label class="qz-opt"><input type="radio" name="topic" value="Другое"><span>Другое</span></label></div></fieldset>
+      <label class="qz-f"><span>Опишите задачу своими словами</span>
+        <textarea name="text" rows="4" required placeholder="Например: нужна база автосервисов Одинцова с телефонами и сайтами"></textarea></label>
+      <label class="qz-f"><span>Город, объём или срок — если важно</span>
+        <input type="text" name="extra" placeholder="Например: до конца месяца, Москва и область"></label>
+      <div class="qz-go"><button class="btn btn-tg btn-big" type="submit">Открыть в Telegram</button>
+        <span class="muted">Сообщение не уйдёт само: вы увидите текст и отправите его, когда захотите.</span></div>
+    </form>
+  </div>
+</section><section class="sec how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h" class="h2">Как работаем</h2>
+    <ul class="how-list"><li><h3>Переписка, без созвонов</h3><p>Задачу обсуждаем в Telegram или по почте. Всё сказанное остаётся в переписке: к нему легко вернуться, ничего не теряется между звонками.</p></li><li><h3>Цена и срок — до начала</h3><p>Оцениваю бесплатно. Цену и срок фиксируем в договоре. Если готового описания задачи нет — помогу сформулировать.</p></li><li><h3>Самозанятый, чек и договор</h3><p>Работаю как плательщик налога на профессиональный доход. Чек выдаю через «Мой налог», безнал от ООО и ИП тоже можно.</p></li><li><h3>Показываю в работе</h3><p>До сдачи вы видите не описание, а работающую вещь: бота можно открыть, таблицу — посмотреть. Правки на этом этапе — обычное дело.</p></li><li><h3>Всё остаётся у вас</h3><p>Ставлю на ваш сервер, за хостинг платите провайдеру напрямую, обычно около 500 ₽ в месяц. За готового бота абонентской платы нет. Код ваш после полной оплаты, первый месяц исправляю ошибки бесплатно, дальше сопровождение — от 2 000 ₽ в час или от 5 000 ₽ в месяц.</p></li></ul>
+  </div>
+</section><section class="sec rel" aria-labelledby="rel-h"><div class="wrap"><h2 id="rel-h" class="h2">Рядом</h2><ul class="rel-list"><li><a href="../../parsing"><span class="rel-t">Парсинг сайтов на заказ</span><span class="rel-d">Сбор данных с сайтов, карт и объявлений в чистую таблицу.</span></a></li><li><a href="../../parsing/baza-kompaniy"><span class="rel-t">База компаний и организаций под вашу задачу</span><span class="rel-d">Отрасль, город, контакты — свежая база в Excel или CRM.</span></a></li><li><a href="../../boty"><span class="rel-t">Telegram-бот для бизнеса</span><span class="rel-d">Запись, напоминания, заявки, оплата — в мессенджере клиента.</span></a></li><li><a href="../../parsing/monitoring-cen"><span class="rel-t">Мониторинг цен конкурентов</span><span class="rel-d">Цены и наличие у конкурентов — каждое утро в Telegram.</span></a></li></ul></div></section><section class="cta" aria-labelledby="cta-h">
+  <div class="wrap cta-in">
+    <h2 id="cta-h" class="cta-h">Расскажите задачу в двух словах</h2>
+    <div class="cta-side"><p>Отвечу с оценкой срока и стоимости. Если пока не ясно, что именно нужно, — тоже пишите, разберёмся в переписке.</p>
+      <p><a class="btn btn-tg btn-big" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p class="muted">или на почту <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a></p></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-contact">
+      <p class="f-h">Связь</p>
+      <p><a class="btn btn-tg" href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Написать в Telegram</a></p>
+      <p>Telegram: <a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">@LoneGunman81</a> — основной канал</p>
+      <p>Почта: <a href="mailto:grishkovmaksim@yandex.ru">grishkovmaksim@yandex.ru</a><br><a href="mailto:maksimgrishkov@gmail.com">maksimgrishkov@gmail.com</a></p>
+      <p>Телефон: <a href="tel:+79267236193">+7 (926) 723-61-93</a><br><span class="muted">Telegram, WhatsApp, MAX — лучше написать</span><br>
+        <span class="msgr"><a href="https://t.me/LoneGunman81" rel="noopener" target="_blank">Telegram</a>
+        <a href="https://wa.me/79267236193" rel="noopener" target="_blank">WhatsApp</a>
+        <span>MAX — по номеру</span></span></p>
+      <p class="muted">Москва и Московская область, работаю удалённо по всей России</p>
+    </div>
+    <div><p class="f-h">Парсинг и базы</p><ul><li><a href="../../parsing/">Парсинг сайтов на заказ</a></li><li><a href="../../parsing/baza-kompaniy/">База компаний и организаций</a></li><li><a href="../../parsing/telegram/">Парсинг Telegram-чатов</a></li><li><a href="../../parsing/monitoring-cen/">Мониторинг цен конкурентов</a></li><li><a href="../../parsing/karty/">2ГИС и Яндекс Карты</a></li></ul></div><div><p class="f-h">Боты</p><ul><li><a href="../../boty/">Telegram-бот для бизнеса</a></li><li><a href="../../boty/zapis-klientov/">Бот записи клиентов</a></li><li><a href="../../boty/marketplace/">Бот для селлеров WB и Ozon</a></li><li><a href="../../boty/stomatologiya/">Бот для стоматологии</a></li><li><a href="../../#integracii">Интеграции с CRM и 1С</a></li></ul></div>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Гришков Максим Александрович, плательщик налога на профессиональный доход (самозанятый), ИНН 500107562836</p>
+    <p class="muted">Все компании, телефоны и цифры в примерах на сайте вымышлены, если не сказано иное.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
